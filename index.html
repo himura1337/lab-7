@@ -6,72 +6,75 @@
     <title>Tea World | Kryskiv Andrew</title>
     
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;600&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="hero-image">
+<div class="main-overlay">
     <header>
-        <h1>The Art of Tea</h1>
-        <p>Відчуй гармонію в кожній чашці</p>
+        <div class="header-content">
+            <h1>The Art of Tea</h1>
+            <div class="divider"></div>
+            <p class="subtitle">Відчуй гармонію в кожній чашці</p>
+        </div>
     </header>
+
+    <main class="container">
+        
+        <section class="glass-card">
+            <h3 class="gold-title">Секрети чайної церемонії</h3>
+            <div id="accordion">
+                <h3>Зелений чай: Свіжість гір</h3>
+                <div class="acc-content">
+                    <p>Заварюйте при температурі 75°C. Це допоможе розкрити трав'яні нотки без гіркоти.</p>
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?q=80&w=600" alt="Green Tea">
+                    </div>
+                </div>
+                <h3>Чорний чай: Сила вогню</h3>
+                <div class="acc-content">
+                    <p>Класичний вибір для сніданку. Використовуйте окріп та настоюйте 4 хвилини.</p>
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1594631252845-29fc4586c517?q=80&w=600" alt="Black Tea">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card">
+            <h3 class="gold-title">Наші сервіси</h3>
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">Бронювання</a></li>
+                    <li><a href="#tabs-2">Доставка</a></li>
+                    <li><a href="#tabs-3">Міцність</a></li>
+                </ul>
+                <div id="tabs-1" class="tab-content">
+                    <p>Оберіть дату для чайної дегустації:</p>
+                    <input type="text" id="datepicker" class="custom-input" placeholder="Оберіть день...">
+                </div>
+                <div id="tabs-2" class="tab-content">
+                    <p>Доставляємо ексклюзивні сорти чаю прямо до ваших дверей.</p>
+                </div>
+                <div id="tabs-3" class="tab-content">
+                    <p>Налаштуйте бажану міцність заварки:</p>
+                    <div id="slider"></div>
+                    <p class="slider-info">Поточний рівень: <span id="slider-value">5</span></p>
+                </div>
+            </div>
+        </section>
+
+        <div class="button-box">
+            <button id="buy-btn" title="Додати у кошик ексклюзивний набір">ЗАМОВИТИ ЗАРАЗ</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Світ Чаю. Автор проєкту: <strong>Криськів Андрій</strong></p>
+    </footer>
 </div>
-
-<main class="container">
-    
-    <section class="glass-panel">
-        <h3 class="section-title">Секрети чайної церемонії</h3>
-        <div id="accordion">
-            <h3>Зелений чай: Свіжість гір</h3>
-            <div>
-                <p>Заварюйте при температурі 75°C. Це допоможе розкрити трав'яні нотки без гіркоти.</p>
-                <img src="https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?q=80&w=400" alt="Green Tea" class="content-img">
-            </div>
-            <h3>Чорний чай: Сила вогню</h3>
-            <div>
-                <p>Класичний вибір для сніданку. Використовуйте окріп та настоюйте 4 хвилини.</p>
-                <img src="https://images.unsplash.com/photo-1594631252845-29fc4586c517?q=80&w=400" alt="Black Tea" class="content-img">
-            </div>
-            <h3>Улун: Магія туману</h3>
-            <div>
-                <p>Улун змінює смак з кожною новою протокою. Ідеально для довгих бесід.</p>
-                <img src="https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?q=80&w=400" alt="Oolong" class="content-img">
-            </div>
-        </div>
-    </section>
-
-    <section class="glass-panel">
-        <h3 class="section-title">Наші сервіси</h3>
-        <div id="tabs">
-            <ul>
-                <li><a href="#tabs-1">Замовлення</a></li>
-                <li><a href="#tabs-2">Доставка</a></li>
-                <li><a href="#tabs-3">Дегустації</a></li>
-            </ul>
-            <div id="tabs-1">
-                <p>Виберіть дату вашого візиту до нас:</p>
-                <input type="text" id="datepicker" placeholder="Натисніть тут...">
-            </div>
-            <div id="tabs-2">
-                <p>Доставляємо чай по всій Україні за 24 години.</p>
-            </div>
-            <div id="tabs-3">
-                <div id="slider"></div>
-                <p>Рівень міцності дегустаційного набору: <span id="slider-value">5</span></p>
-            </div>
-        </div>
-    </section>
-
-    <div class="action-area">
-        <button id="buy-btn" title="Додати у кошик ексклюзивний набір">Скуштувати зараз</button>
-    </div>
-
-</main>
-
-<footer>
-    <p>© 2026 Світ Чаю. Розробка: **Криськів Андрій** (ПП-213)</p>
-</footer>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
@@ -79,7 +82,10 @@
 <script>
 $( function() {
     $( "#tabs" ).tabs();
-    $( "#accordion" ).accordion({ heightStyle: "content" });
+    $( "#accordion" ).accordion({ 
+        heightStyle: "content",
+        collapsible: true 
+    });
     $( "#datepicker" ).datepicker();
     $( "#slider" ).slider({
         range: "min",

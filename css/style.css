@@ -1,83 +1,125 @@
-body {
-    background-image: url('https://images.unsplash.com/photo-1544787210-2213d2499fca?q=80&w=1920'); /* Фонове фото чайної плантації */
-    background-attachment: fixed;
-    background-size: cover;
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
+body, html {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* Шапка з ефектом затінення */
-.hero-image {
-    background: rgba(0, 0, 0, 0.6);
-    height: 300px;
+body {
+    background-image: url('https://images.unsplash.com/photo-1544787210-2213d2499fca?q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Затемнення фону */
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+
+header {
     text-align: center;
-    border-bottom: 4px solid #c5a059; /* Золота лінія */
+    padding: 80px 20px;
 }
 
 header h1 {
     font-family: 'Lobster', cursive;
-    font-size: 5em;
+    font-size: 5rem;
+    color: #f1c40f; /* Золотий колір */
     margin: 0;
-    color: #c5a059;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    text-shadow: 3px 3px 15px rgba(0,0,0,0.8);
+}
+
+.divider {
+    width: 100px;
+    height: 30px;
+    border-bottom: 2px solid #f1c40f;
+    margin: 0 auto 15px;
+}
+
+.subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 2px;
 }
 
 .container {
-    max-width: 900px;
-    margin: -50px auto 50px;
-    padding: 0 20px;
-}
-
-/* Скляні панелі для тексту */
-.glass-panel {
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-.section-title {
-    font-family: 'Lobster', cursive;
-    font-size: 2em;
-    color: #c5a059;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.content-img {
     width: 100%;
-    border-radius: 10px;
-    margin-top: 15px;
+    max-width: 800px;
+    padding-bottom: 50px;
 }
+
+/* Скляні картки */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.gold-title {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+    color: #f1c40f;
+    margin-bottom: 30px;
+}
+
+/* Акордеон та вкладки */
+.acc-content { text-align: left; color: #eee; }
+.tab-content { padding: 20px; color: #fff; font-size: 1.1rem; }
+
+.img-wrapper {
+    width: 100%;
+    margin-top: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #f1c40f;
+}
+
+.img-wrapper img { width: 100%; transition: 0.5s; display: block; }
+.img-wrapper img:hover { transform: scale(1.1); }
 
 /* Кнопка */
-.action-area { text-align: center; }
+.button-box { padding: 20px; text-align: center; }
 #buy-btn {
-    background: #c5a059;
+    background: #f1c40f;
     color: #000;
-    font-weight: bold;
-    padding: 15px 40px;
+    padding: 20px 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
     border: none;
     border-radius: 50px;
-    font-size: 1.2em;
     cursor: pointer;
+    box-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
     transition: 0.3s;
 }
-#buy-btn:hover { background: #fff; transform: scale(1.05); }
 
-/* Кастомізація jQuery UI під золото */
-.ui-widget-header { background: #c5a059 !important; color: #000 !important; border: none; }
+#buy-btn:hover {
+    background: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+
+.ui-widget-header { background: #f1c40f !important; color: #000 !important; font-weight: bold; border: none; }
 .ui-state-active { background: #fff !important; color: #000 !important; border: none !important; }
+.custom-input { padding: 10px; border-radius: 5px; border: none; width: 200px; text-align: center; }
 
 footer {
-    background: #000;
+    width: 100%;
     text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
+    padding: 30px 0;
+    background: rgba(0,0,0,0.8);
+    color: #aaa;
+    margin-top: auto;
 }
