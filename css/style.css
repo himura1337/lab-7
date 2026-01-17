@@ -1,0 +1,40 @@
+body {
+    background-color: #f4f1ea;
+    color: #2c3e50;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+header {
+    background-color: #4a5d23;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    font-family: 'Playfair Display', serif;
+}
+.accent { color: #d4e157; }
+h3 { border-bottom: 2px solid #4a5d23; padding-bottom: 10px; margin-top: 40px; }
+
+/* Кастомізація jQuery UI */
+#tabs, #accordion { margin-top: 20px; }
+.ui-widget-header { background: #4a5d23 !important; border: none; color: white !important; }
+.ui-state-active, .ui-widget-content .ui-state-active { background: #6d823f !important; border: 1px solid #4a5d23 !important; }
+
+.ui-widgets { display: flex; gap: 20px; margin-top: 30px; }
+.widget-box { flex: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+#slider { margin: 20px 0; }
+#buy-btn {
+    background: #4a5d23;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+footer { text-align: center; padding: 30px; color: #888; }

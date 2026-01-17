@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea World - Lab 7 Kryskiv</title>
+    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>TEA <span class="accent">WORLD</span></h1>
+        <p>Мистецтво заварювання та смаку</p>
+    </div>
+</header>
+
+<main class="container">
+    
+    <section>
+        <h3>Сорти чаю</h3>
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Зелений</a></li>
+                <li><a href="#tabs-2">Чорний</a></li>
+                <li><a href="#tabs-3">Улун</a></li>
+            </ul>
+            <div id="tabs-1">
+                <p>Зелений чай мінімально ферментований. Популярні види: Сенча, Лунцзин, Матча.</p>
+            </div>
+            <div id="tabs-2">
+                <p>Чорний чай має повну ферментацію. Відомий своїм насиченим смаком: Ассам, Ерл Грей.</p>
+            </div>
+            <div id="tabs-3">
+                <p>Улун — напівферментований чай, що поєднує свіжість зеленого та міцність чорного чаю.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Поради майстра</h3>
+        <div id="accordion">
+            <h3>Температура води</h3>
+            <div>
+                <p>Для зеленого чаю — 70-80°C, для чорного — 95-100°C.</p>
+            </div>
+            <h3>Час настоювання</h3>
+            <div>
+                <p>Зазвичай від 2 до 5 хвилин залежно від сорту та ваших уподобань.</p>
+            </div>
+            <h3>Посуд</h3>
+            <div>
+                <p>Найкраще використовувати ісинську глину або порцеляну.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="ui-widgets">
+        <div class="widget-box">
+            <h3>Замовити дегустацію</h3>
+            <p>Виберіть дату: <input type="text" id="datepicker"></p>
+        </div>
+
+        <div class="widget-box">
+            <h3>Міцність заварки (1-10)</h3>
+            <div id="slider"></div>
+            <p>Рівень: <span id="slider-value">5</span></p>
+        </div>
+    </section>
+
+    <section>
+        <button id="buy-btn" title="Натисніть, щоб додати у кошик">Купити цей сорт</button>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026. Виконав: Криськів А. (ПП-213)</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+
+<script>
+$( function() {
+    // Ініціалізація вкладок
+    $( "#tabs" ).tabs();
+    
+    // Ініціалізація акордеона
+    $( "#accordion" ).accordion();
+    
+    // Календар
+    $( "#datepicker" ).datepicker({
+        dateFormat: "dd.mm.yy"
+    });
+    
+    // Слайдер
+    $( "#slider" ).slider({
+        range: "min",
+        value: 5,
+        min: 1,
+        max: 10,
+        slide: function( event, ui ) {
+            $( "#slider-value" ).text( ui.value );
+        }
+    });
+    
+    // Підказка (Tooltip)
+    $( document ).tooltip();
+});
+</script>
+
+</body>
+</html>
