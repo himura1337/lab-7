@@ -1,13 +1,12 @@
-HTML
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tea Ceremony | Kryskiv Andrew</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;600&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,72 +14,103 @@ HTML
 <div class="background-overlay"></div>
 
 <div class="wrapper">
-    <header>
-        <div class="logo">TEA WORLD</div>
-        <h1>The Art of Harmony</h1>
-        <div class="ornament"></div>
-        <p class="tagline">Відчуй спокій у кожному ковтку</p>
-    </header>
 
-    <main>
-        <section class="premium-card">
-            <h2 class="card-title">Магія Заварювання</h2>
-            <div id="accordion">
-                <h3>Смарагдовий Зелений</h3>
-                <div class="acc-body">
-                    <p>Легкість та свіжість. Температура 75°C. Ідеально для ранкової медитації.</p>
-                    <img src="https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?q=80&w=600" class="tea-img">
-                </div>
-                <h3>Королівський Чорний</h3>
-                <div class="acc-body">
-                    <p>Насиченість та енергія. Настоюйте 4 хвилини в глиняному посуді.</p>
-                    <img src="https://images.unsplash.com/photo-1594631252845-29fc4586c517?q=80&w=600" class="tea-img">
-                </div>
-            </div>
-        </section>
+<header>
+    <div class="logo">TEA WORLD</div>
+    <h1>The Art of Harmony</h1>
+    <div class="ornament"></div>
+    <p class="tagline">
+        Чай — це не напій.  
+        Це тиша, зосередженість і мить, у якій зникає шум світу.
+    </p>
+</header>
 
-        <section class="premium-card glass">
-            <h2 class="card-title">Сервіс & Дегустація</h2>
-            <div id="tabs">
-                <ul>
-                    <li><a href="#tabs-1">Візит</a></li>
-                    <li><a href="#tabs-2">Міцність</a></li>
-                </ul>
-                <div id="tabs-1" class="tab-content">
-                    <p>Забронюйте час вашої особистої церемонії:</p>
-                    <input type="text" id="datepicker" class="elegant-input" placeholder="Оберіть дату">
-                </div>
-                <div id="tabs-2" class="tab-content">
-                    <p>Оберіть бажану інтенсивність смаку:</p>
-                    <div id="slider"></div>
-                    <div class="level">Рівень: <span id="slider-value">5</span></div>
-                </div>
-            </div>
-        </section>
+<main>
 
-        <div class="center-btn">
-            <button id="buy-btn" title="Додати в кошик">ПОЧАТИ ПОДОРОЖ</button>
+<section class="premium-card">
+    <h2 class="card-title">Магія Заварювання</h2>
+
+    <div id="accordion">
+        <h3>🌿 Смарагдовий зелений</h3>
+        <div class="acc-body">
+            <p>
+                Легкий, чистий смак із нотками весняного листя.  
+                Заварюється при 75°C — для ясності думок і спокійного початку дня.
+            </p>
+            <img src="https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?q=80&w=600" class="tea-img">
         </div>
-    </main>
 
-    <footer>
-        <p>© 2026 TEA WORLD. Дизайн: <strong>Криськів Андрій</strong></p>
-    </footer>
+        <h3>☕ Королівський чорний</h3>
+        <div class="acc-body">
+            <p>
+                Глибокий аромат, сила і тепло.  
+                Настоювати 4 хвилини — ідеально для концентрації та рішень.
+            </p>
+            <img src="https://images.unsplash.com/photo-1594631252845-29fc4586c517?q=80&w=600" class="tea-img">
+        </div>
+    </div>
+</section>
+
+<section class="premium-card">
+    <h2 class="card-title">Персональна Церемонія</h2>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">Дата</a></li>
+            <li><a href="#tabs-2">Смак</a></li>
+        </ul>
+
+        <div id="tabs-1">
+            <p>Оберіть день для вашої чайної подорожі:</p>
+            <input type="text" id="datepicker" class="elegant-input" placeholder="Оберіть дату">
+        </div>
+
+        <div id="tabs-2">
+            <p>Визначте інтенсивність:</p>
+            <div id="slider"></div>
+            <div class="level">Рівень: <span id="slider-value">5</span>/10</div>
+        </div>
+    </div>
+</section>
+
+<div class="center-btn">
+    <button id="buy-btn" title="Розпочати чайну церемонію">
+        ПОЧАТИ ЦЕРЕМОНІЮ
+    </button>
+</div>
+
+</main>
+
+<footer>
+    © 2026 TEA WORLD · Дизайн та розробка: <strong>Криськів Андрій</strong>
+</footer>
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
 <script>
-$( function() {
-    $( "#tabs" ).tabs();
-    $( "#accordion" ).accordion({ heightStyle: "content", collapsible: true });
-    $( "#datepicker" ).datepicker();
-    $( "#slider" ).slider({
-        range: "min", value: 5, min: 1, max: 10,
-        slide: function( event, ui ) { $( "#slider-value" ).text( ui.value ); }
+$(function() {
+    $("#accordion").accordion({
+        heightStyle: "content",
+        collapsible: true
     });
-    $( document ).tooltip();
+
+    $("#tabs").tabs();
+    $("#datepicker").datepicker();
+
+    $("#slider").slider({
+        min: 1,
+        max: 10,
+        value: 5,
+        slide: function(e, ui) {
+            $("#slider-value").text(ui.value);
+        }
+    });
+
+    $(document).tooltip();
 });
 </script>
+
 </body>
 </html>
