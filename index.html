@@ -1,102 +1,86 @@
+HTML
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tea World | Kryskiv Andrew</title>
-    
+    <title>Tea Ceremony | Kryskiv Andrew</title>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;600&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;600&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="main-overlay">
+<div class="background-overlay"></div>
+
+<div class="wrapper">
     <header>
-        <div class="header-content">
-            <h1>The Art of Tea</h1>
-            <div class="divider"></div>
-            <p class="subtitle">Відчуй гармонію в кожній чашці</p>
-        </div>
+        <div class="logo">TEA WORLD</div>
+        <h1>The Art of Harmony</h1>
+        <div class="ornament"></div>
+        <p class="tagline">Відчуй спокій у кожному ковтку</p>
     </header>
 
-    <main class="container">
-        
-        <section class="glass-card">
-            <h3 class="gold-title">Секрети чайної церемонії</h3>
+    <main>
+        <section class="premium-card">
+            <h2 class="card-title">Магія Заварювання</h2>
             <div id="accordion">
-                <h3>Зелений чай: Свіжість гір</h3>
-                <div class="acc-content">
-                    <p>Заварюйте при температурі 75°C. Це допоможе розкрити трав'яні нотки без гіркоти.</p>
-                    <div class="img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?q=80&w=600" alt="Green Tea">
-                    </div>
+                <h3>Смарагдовий Зелений</h3>
+                <div class="acc-body">
+                    <p>Легкість та свіжість. Температура 75°C. Ідеально для ранкової медитації.</p>
+                    <img src="https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?q=80&w=600" class="tea-img">
                 </div>
-                <h3>Чорний чай: Сила вогню</h3>
-                <div class="acc-content">
-                    <p>Класичний вибір для сніданку. Використовуйте окріп та настоюйте 4 хвилини.</p>
-                    <div class="img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1594631252845-29fc4586c517?q=80&w=600" alt="Black Tea">
-                    </div>
+                <h3>Королівський Чорний</h3>
+                <div class="acc-body">
+                    <p>Насиченість та енергія. Настоюйте 4 хвилини в глиняному посуді.</p>
+                    <img src="https://images.unsplash.com/photo-1594631252845-29fc4586c517?q=80&w=600" class="tea-img">
                 </div>
             </div>
         </section>
 
-        <section class="glass-card">
-            <h3 class="gold-title">Наші сервіси</h3>
+        <section class="premium-card glass">
+            <h2 class="card-title">Сервіс & Дегустація</h2>
             <div id="tabs">
                 <ul>
-                    <li><a href="#tabs-1">Бронювання</a></li>
-                    <li><a href="#tabs-2">Доставка</a></li>
-                    <li><a href="#tabs-3">Міцність</a></li>
+                    <li><a href="#tabs-1">Візит</a></li>
+                    <li><a href="#tabs-2">Міцність</a></li>
                 </ul>
                 <div id="tabs-1" class="tab-content">
-                    <p>Оберіть дату для чайної дегустації:</p>
-                    <input type="text" id="datepicker" class="custom-input" placeholder="Оберіть день...">
+                    <p>Забронюйте час вашої особистої церемонії:</p>
+                    <input type="text" id="datepicker" class="elegant-input" placeholder="Оберіть дату">
                 </div>
                 <div id="tabs-2" class="tab-content">
-                    <p>Доставляємо ексклюзивні сорти чаю прямо до ваших дверей.</p>
-                </div>
-                <div id="tabs-3" class="tab-content">
-                    <p>Налаштуйте бажану міцність заварки:</p>
+                    <p>Оберіть бажану інтенсивність смаку:</p>
                     <div id="slider"></div>
-                    <p class="slider-info">Поточний рівень: <span id="slider-value">5</span></p>
+                    <div class="level">Рівень: <span id="slider-value">5</span></div>
                 </div>
             </div>
         </section>
 
-        <div class="button-box">
-            <button id="buy-btn" title="Додати у кошик ексклюзивний набір">ЗАМОВИТИ ЗАРАЗ</button>
+        <div class="center-btn">
+            <button id="buy-btn" title="Додати в кошик">ПОЧАТИ ПОДОРОЖ</button>
         </div>
-
     </main>
 
     <footer>
-        <p>© 2026 Світ Чаю. Автор проєкту: <strong>Криськів Андрій</strong></p>
+        <p>© 2026 TEA WORLD. Дизайн: <strong>Криськів Андрій</strong></p>
     </footer>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
-
 <script>
 $( function() {
     $( "#tabs" ).tabs();
-    $( "#accordion" ).accordion({ 
-        heightStyle: "content",
-        collapsible: true 
-    });
+    $( "#accordion" ).accordion({ heightStyle: "content", collapsible: true });
     $( "#datepicker" ).datepicker();
     $( "#slider" ).slider({
-        range: "min",
-        value: 5,
-        min: 1,
-        max: 10,
+        range: "min", value: 5, min: 1, max: 10,
         slide: function( event, ui ) { $( "#slider-value" ).text( ui.value ); }
     });
     $( document ).tooltip();
 });
 </script>
-
 </body>
 </html>
