@@ -3,83 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tea World - Lab 7 Kryskiv</title>
+    <title>Tea World | Kryskiv Andrew</title>
     
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <h1>TEA <span class="accent">WORLD</span></h1>
-        <p>Мистецтво заварювання та смаку</p>
-    </div>
-</header>
+<div class="hero-image">
+    <header>
+        <h1>The Art of Tea</h1>
+        <p>Відчуй гармонію в кожній чашці</p>
+    </header>
+</div>
 
 <main class="container">
     
-    <section>
-        <h3>Сорти чаю</h3>
+    <section class="glass-panel">
+        <h3 class="section-title">Секрети чайної церемонії</h3>
+        <div id="accordion">
+            <h3>Зелений чай: Свіжість гір</h3>
+            <div>
+                <p>Заварюйте при температурі 75°C. Це допоможе розкрити трав'яні нотки без гіркоти.</p>
+                <img src="https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?q=80&w=400" alt="Green Tea" class="content-img">
+            </div>
+            <h3>Чорний чай: Сила вогню</h3>
+            <div>
+                <p>Класичний вибір для сніданку. Використовуйте окріп та настоюйте 4 хвилини.</p>
+                <img src="https://images.unsplash.com/photo-1594631252845-29fc4586c517?q=80&w=400" alt="Black Tea" class="content-img">
+            </div>
+            <h3>Улун: Магія туману</h3>
+            <div>
+                <p>Улун змінює смак з кожною новою протокою. Ідеально для довгих бесід.</p>
+                <img src="https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?q=80&w=400" alt="Oolong" class="content-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="glass-panel">
+        <h3 class="section-title">Наші сервіси</h3>
         <div id="tabs">
             <ul>
-                <li><a href="#tabs-1">Зелений</a></li>
-                <li><a href="#tabs-2">Чорний</a></li>
-                <li><a href="#tabs-3">Улун</a></li>
+                <li><a href="#tabs-1">Замовлення</a></li>
+                <li><a href="#tabs-2">Доставка</a></li>
+                <li><a href="#tabs-3">Дегустації</a></li>
             </ul>
             <div id="tabs-1">
-                <p>Зелений чай мінімально ферментований. Популярні види: Сенча, Лунцзин, Матча.</p>
+                <p>Виберіть дату вашого візиту до нас:</p>
+                <input type="text" id="datepicker" placeholder="Натисніть тут...">
             </div>
             <div id="tabs-2">
-                <p>Чорний чай має повну ферментацію. Відомий своїм насиченим смаком: Ассам, Ерл Грей.</p>
+                <p>Доставляємо чай по всій Україні за 24 години.</p>
             </div>
             <div id="tabs-3">
-                <p>Улун — напівферментований чай, що поєднує свіжість зеленого та міцність чорного чаю.</p>
+                <div id="slider"></div>
+                <p>Рівень міцності дегустаційного набору: <span id="slider-value">5</span></p>
             </div>
         </div>
     </section>
 
-    <section>
-        <h3>Поради майстра</h3>
-        <div id="accordion">
-            <h3>Температура води</h3>
-            <div>
-                <p>Для зеленого чаю — 70-80°C, для чорного — 95-100°C.</p>
-            </div>
-            <h3>Час настоювання</h3>
-            <div>
-                <p>Зазвичай від 2 до 5 хвилин залежно від сорту та ваших уподобань.</p>
-            </div>
-            <h3>Посуд</h3>
-            <div>
-                <p>Найкраще використовувати ісинську глину або порцеляну.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="ui-widgets">
-        <div class="widget-box">
-            <h3>Замовити дегустацію</h3>
-            <p>Виберіть дату: <input type="text" id="datepicker"></p>
-        </div>
-
-        <div class="widget-box">
-            <h3>Міцність заварки (1-10)</h3>
-            <div id="slider"></div>
-            <p>Рівень: <span id="slider-value">5</span></p>
-        </div>
-    </section>
-
-    <section>
-        <button id="buy-btn" title="Натисніть, щоб додати у кошик">Купити цей сорт</button>
-    </section>
+    <div class="action-area">
+        <button id="buy-btn" title="Додати у кошик ексклюзивний набір">Скуштувати зараз</button>
+    </div>
 
 </main>
 
 <footer>
-    <p>© 2026. Виконав: Криськів А. (ПП-213)</p>
+    <p>© 2026 Світ Чаю. Розробка: **Криськів Андрій** (ПП-213)</p>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -87,29 +78,16 @@
 
 <script>
 $( function() {
-    // Ініціалізація вкладок
     $( "#tabs" ).tabs();
-    
-    // Ініціалізація акордеона
-    $( "#accordion" ).accordion();
-    
-    // Календар
-    $( "#datepicker" ).datepicker({
-        dateFormat: "dd.mm.yy"
-    });
-    
-    // Слайдер
+    $( "#accordion" ).accordion({ heightStyle: "content" });
+    $( "#datepicker" ).datepicker();
     $( "#slider" ).slider({
         range: "min",
         value: 5,
         min: 1,
         max: 10,
-        slide: function( event, ui ) {
-            $( "#slider-value" ).text( ui.value );
-        }
+        slide: function( event, ui ) { $( "#slider-value" ).text( ui.value ); }
     });
-    
-    // Підказка (Tooltip)
     $( document ).tooltip();
 });
 </script>
